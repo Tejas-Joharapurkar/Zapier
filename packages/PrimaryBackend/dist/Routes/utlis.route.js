@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.utilsRouter = void 0;
+const express_1 = require("express");
+const utils_controller_1 = require("../Controllers/utils.controller");
+const router = (0, express_1.Router)();
+router.route("/createtrigger").post(utils_controller_1.CreateAvailableTigger);
+router.route("/createaction").post(utils_controller_1.CreateAvailableAction);
+router.route("/getallavailabetriggers").get(utils_controller_1.getAllAvalilabeTriggers);
+router.route("/getallavailabeactions").get(utils_controller_1.getAllAvalilabeActions);
+exports.utilsRouter = router;
